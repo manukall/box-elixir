@@ -1,14 +1,16 @@
 name: elixir
-version: 0.0.1
+version: 0.0.2
 type: main
 platform: ubuntu@12.04
 description: box with erlang and elixir
 keywords:
   - elixir
   - erlang
+  - hex
 packages:
   - erlang@OTP_17.4-2
   - elixir@1.0.3
+  - hex
 script : |
   sudo apt-get update
   sudo apt-get install -yq wget
@@ -16,3 +18,4 @@ script : |
   sudo dpkg -i erlang-solutions_1.0_all.deb
   sudo apt-get update
   sudo apt-get install -yq erlang elixir
+  mix local.hex --force
