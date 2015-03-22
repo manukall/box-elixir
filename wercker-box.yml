@@ -1,5 +1,5 @@
 name: elixir
-version: 0.0.3
+version: 0.0.4
 type: main
 platform: ubuntu@12.04
 description: box with erlang and elixir
@@ -7,10 +7,12 @@ keywords:
   - elixir
   - erlang
   - hex
+  - rebar
 packages:
   - erlang@OTP_17.4-2
   - elixir@1.0.3
   - hex
+  - rebar
 script : |
   sudo apt-get update
   sudo apt-get install -yq wget git
@@ -19,3 +21,4 @@ script : |
   sudo apt-get update
   sudo apt-get install -yq erlang elixir
   mix local.hex --force
+  mix local.rebar --force
